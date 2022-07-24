@@ -1,4 +1,5 @@
 ﻿// Bcrypt
+using read_write_files.Models;
 namespace InitialMenu
 {
     internal class Program
@@ -20,24 +21,36 @@ namespace InitialMenu
         // Method to realize the login process:
         static string[] LoginProtocol(){
             string user, password;
-            string[] LoginInfo = new string[3];
+            string[] DateAndHour, LoginInfo = new string[3];
 
             Console.Write("Write your username:");
-            LoginInfo[0] = Console.ReadLine();
+            user = Console.ReadLine();
         
             Console.Write("Write your password:");
-            LoginInfo[1] = Console.ReadLine();
+            password = Console.ReadLine();
 
-            // TODO:
-            //LoginInfo[2] = CheckUserPassword(LoginInfo[0], LoginInfo[1]);
+            // TODO: Check logging using the data base 
+            //LoginInfo[4] = CheckUserPassword(LoginInfo[0], LoginInfo[1]);
+            DateAndHour = TakeCurrentDateAndHour();
+
+            // TODO: Recover user name from data base
+            LoginInfo[0] = "user";
+            LoginInfo[1] = "123";
             LoginInfo[2] = "1";
-            
+
             if(LoginInfo[2] == "1"){
                 Console.WriteLine("Login executed with success. Showing new menu:\n");
             }else{
                 Console.WriteLine("Username or password are wrong, please try again.");
             }
             return LoginInfo;
+        }
+
+        // Method to take current date and hour
+        static string[] TakeCurrentDateAndHour(){
+            string[] DateAndHour = DateTime.UtcNow.ToString().Split(" ");
+            string[] FormatedDateAnHour = {DateAndHour[0], $"{DateAndHour[1]} {DateAndHour[2]}"};
+            return FormatedDateAnHour;
         }
 
         // Method to take an action given an option in the second menu
@@ -55,7 +68,7 @@ namespace InitialMenu
                     break;
             }
         }
-        
+
         // Method to take an action given an option in the main menu
         static bool DoChoosedOption(string option){
             bool running = true;
@@ -64,9 +77,9 @@ namespace InitialMenu
                 case "1":
                     string[] LoginInfo = LoginProtocol();
                     if(LoginInfo[2] == "1"){
-                        // TODO:
-                        // Save user data in a csv file
-
+                        UserAccess userAccess = new(LoginInfo);
+                        string[] FormatedDateAndHour = TakeCurrentDateAndHour();
+                        userAccess.SaveUserAcessInfo(userAccess, FormatedDateAndHour);
                         string option2;
 
                         do
@@ -78,7 +91,9 @@ namespace InitialMenu
                             DoChoosedOption2(option2);
 
                         }while(option2 != "1" && option2 != "2");
-
+                        
+                        FormatedDateAndHour = TakeCurrentDateAndHour();
+                        userAccess.SaveUserLogOutInfo(userAccess, FormatedDateAndHour);
                         running = !(option2 == "2"); 
 
                     }
@@ -100,7 +115,6 @@ namespace InitialMenu
         {
             bool running;
             string option;
-
             do
             {
                 ShowMenu();
