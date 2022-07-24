@@ -1,0 +1,15 @@
+/home/paulo/Desktop/PauloGuilherme-d3-avaliacao/PauloGuilherme-d3-avaliacao/bin/Debug/net6.0/PauloGuilherme-d3-avaliacao
+/home/paulo/Desktop/PauloGuilherme-d3-avaliacao/PauloGuilherme-d3-avaliacao/bin/Debug/net6.0/PauloGuilherme-d3-avaliacao.deps.json
+/home/paulo/Desktop/PauloGuilherme-d3-avaliacao/PauloGuilherme-d3-avaliacao/bin/Debug/net6.0/PauloGuilherme-d3-avaliacao.runtimeconfig.json
+/home/paulo/Desktop/PauloGuilherme-d3-avaliacao/PauloGuilherme-d3-avaliacao/bin/Debug/net6.0/PauloGuilherme-d3-avaliacao.dll
+/home/paulo/Desktop/PauloGuilherme-d3-avaliacao/PauloGuilherme-d3-avaliacao/bin/Debug/net6.0/PauloGuilherme-d3-avaliacao.pdb
+/home/paulo/Desktop/PauloGuilherme-d3-avaliacao/PauloGuilherme-d3-avaliacao/obj/Debug/net6.0/PauloGuilherme-d3-avaliacao.csproj.AssemblyReference.cache
+/home/paulo/Desktop/PauloGuilherme-d3-avaliacao/PauloGuilherme-d3-avaliacao/obj/Debug/net6.0/PauloGuilherme-d3-avaliacao.GeneratedMSBuildEditorConfig.editorconfig
+/home/paulo/Desktop/PauloGuilherme-d3-avaliacao/PauloGuilherme-d3-avaliacao/obj/Debug/net6.0/PauloGuilherme-d3-avaliacao.AssemblyInfoInputs.cache
+/home/paulo/Desktop/PauloGuilherme-d3-avaliacao/PauloGuilherme-d3-avaliacao/obj/Debug/net6.0/PauloGuilherme-d3-avaliacao.AssemblyInfo.cs
+/home/paulo/Desktop/PauloGuilherme-d3-avaliacao/PauloGuilherme-d3-avaliacao/obj/Debug/net6.0/PauloGuilherme-d3-avaliacao.csproj.CoreCompileInputs.cache
+/home/paulo/Desktop/PauloGuilherme-d3-avaliacao/PauloGuilherme-d3-avaliacao/obj/Debug/net6.0/PauloGuilherme-d3-avaliacao.dll
+/home/paulo/Desktop/PauloGuilherme-d3-avaliacao/PauloGuilherme-d3-avaliacao/obj/Debug/net6.0/refint/PauloGuilherme-d3-avaliacao.dll
+/home/paulo/Desktop/PauloGuilherme-d3-avaliacao/PauloGuilherme-d3-avaliacao/obj/Debug/net6.0/PauloGuilherme-d3-avaliacao.pdb
+/home/paulo/Desktop/PauloGuilherme-d3-avaliacao/PauloGuilherme-d3-avaliacao/obj/Debug/net6.0/PauloGuilherme-d3-avaliacao.genruntimeconfig.cache
+/home/paulo/Desktop/PauloGuilherme-d3-avaliacao/PauloGuilherme-d3-avaliacao/obj/Debug/net6.0/ref/PauloGuilherme-d3-avaliacao.dll
