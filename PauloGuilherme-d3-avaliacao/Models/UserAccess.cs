@@ -1,4 +1,4 @@
-// File with basic UserAcess methods
+// File with basic UserAccess methods
 namespace Models
 {
     internal class UserAccess: BasicFile{
@@ -18,35 +18,35 @@ namespace Models
 
         // Method to format a message of access
 
-        private static string UserAccessedSystemMensage(UserAccess userAccess, string[] FormatedDateAnHour)
+        private static string UserAccessedSystemMessage(UserAccess userAccess, string[] FormattedDateAndHour)
         {
             string line = $"The user {userAccess.Name} ({userAccess.IdUserAccess})";
-            line += $" accessed the system at {FormatedDateAnHour[0]} on {FormatedDateAnHour[1]}";
+            line += $" accessed the system at {FormattedDateAndHour[0]} on {FormattedDateAndHour[1]}";
             return line;
         }
 
         // Method to format a message of log out
 
-        private static string UserLogOutSystemMensage(UserAccess userAccess, string[] FormatedDateAnHour)
+        private static string UserLogOutSystemMessage(UserAccess userAccess, string[] FormattedDateAndHour)
         {
             string line = $"The user {userAccess.Name} ({userAccess.IdUserAccess})";
-            line += $" logged out of the system at {FormatedDateAnHour[0]} on {FormatedDateAnHour[1]}";
+            line += $" logged out of the system at {FormattedDateAndHour[0]} on {FormattedDateAndHour[1]}";
             return line;
         }
 
         // Method to write a message of access
 
-        public void SaveUserAcessInfo(UserAccess userAccess, string[] FormatedDateAnHour)
+        public void SaveUserAcessInfo(UserAccess userAccess, string[] FormattedDateAndHour)
         {
-            string[] line = { UserAccessedSystemMensage(userAccess, FormatedDateAnHour) };
+            string[] line = { UserAccessedSystemMessage(userAccess, FormattedDateAndHour) };
             File.AppendAllLines(path, line);
         }
 
         // Method to write a message of log out
 
-        public void SaveUserLogOutInfo(UserAccess userAccess, string[] FormatedDateAnHour)
+        public void SaveUserLogOutInfo(UserAccess userAccess, string[] FormattedDateAndHour)
         {
-            string[] line = { UserLogOutSystemMensage(userAccess, FormatedDateAnHour) };
+            string[] line = { UserLogOutSystemMessage(userAccess, FormattedDateAndHour) };
             File.AppendAllLines(path, line);
         }
     }   
