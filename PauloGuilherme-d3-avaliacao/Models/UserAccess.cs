@@ -6,6 +6,12 @@ namespace Models
 
         private string? Name { get; set; }
 
+        // Email and password are not used by this class in the current project 
+
+        // private string? Email { get; set; }
+
+        // private string? Password { get; set; }
+
         private const string path = "UserAccessLogs/UserAccess.csv";
 
         // Class constructor
