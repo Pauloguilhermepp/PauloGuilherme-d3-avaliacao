@@ -15,7 +15,7 @@ namespace Utils
             Console.Write("Write your password:");
             password = Console.ReadLine();
 
-            LoginInfo = UserRepository.CheckUserPassword(email, password);
+            LoginInfo = UserRepository.TakeUserNameAndId(email, password);
 
             if(LoginInfo[0] != null && LoginInfo[1] != null){
                 Console.WriteLine("Login executed with success. Showing new menu:\n");
