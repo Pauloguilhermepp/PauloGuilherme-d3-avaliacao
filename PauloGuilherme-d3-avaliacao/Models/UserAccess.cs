@@ -1,4 +1,3 @@
-
 namespace Models
 {
     internal class UserAccess: BasicFile{
@@ -6,23 +5,12 @@ namespace Models
 
         private string Name { get; set; } = string.Empty;
 
-        /*private string Time { get; set; } = string.Empty;
-
-        private string Date { get; set; } = string.Empty;*/
-
         private const string path = "database/UserAccess.csv";
-
-        /*public UserAccess()
-        {
-            CreateFolderAndFile(path);
-        }*/
 
         public UserAccess(string[] userAccessInfo)
         {
             Name = userAccessInfo[0];
             IdUserAccess = userAccessInfo[1];
-            //Time = userAccessInfo[2];
-            //Date = userAccessInfo[3];
             CreateFolderAndFile(path);
         }
 

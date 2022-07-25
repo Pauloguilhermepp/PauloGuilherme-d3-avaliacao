@@ -31,8 +31,6 @@ namespace InitialMenu
             Console.Write("Write your password:");
             password = Console.ReadLine();
 
-            // TODO: Check logging using the data base
-            UserRepository.method();
             LoginInfo = UserRepository.CheckUserPassword(user, password);
             DateAndHour = TakeCurrentDateAndHour();
 

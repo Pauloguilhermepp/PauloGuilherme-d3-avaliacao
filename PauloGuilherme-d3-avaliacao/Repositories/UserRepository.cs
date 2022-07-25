@@ -1,12 +1,8 @@
 using MySql.Data.MySqlClient;
-
 namespace Repositories
 {
     internal class UserRepository{
-
-        public static void method(){
-            Console.WriteLine("Oii");
-        }
+        // Method to take user data during login
         public static string[] CheckUserPassword(string email, string password){
             string[] NameAndId = {null, null};
 
@@ -18,7 +14,6 @@ namespace Repositories
                 conn.Open();
 
                 string sql = "SELECT UserId, UserName FROM User WHERE UserEmail=@email AND UserPassword=@password";
-                //string sql = "SELECT * FROM User";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 
                 cmd.Parameters.AddWithValue("@email", email);
