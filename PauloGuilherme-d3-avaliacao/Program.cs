@@ -20,10 +20,10 @@ namespace Menu
         }
 
         // Method to take an action given an option in the main menu
-        static bool DoChoosedOption(string? option){
+        static bool DoSelectedOption(string? option){
             bool running = true;
             if(option == null){
-                Console.WriteLine("Error: Option choosed is null");
+                Console.WriteLine("Error: Option selected is null");
                 return running;
             }
             switch(option)
@@ -32,8 +32,8 @@ namespace Menu
                     string?[] LoginInfo = UM.LoginProtocol();
                     if(LoginInfo[0] != null && LoginInfo[1] != null){
                         UserAccess userAccess = new(LoginInfo);
-                        string[] FormatedDateAndHour = UM.TakeCurrentDateAndHour();
-                        userAccess.SaveUserAcessInfo(userAccess, FormatedDateAndHour);
+                        string[] FormattedDateAndHour = UM.TakeCurrentDateAndHour();
+                        userAccess.SaveUserAccessInfo(userAccess, FormattedDateAndHour);
                         string? option2;
                         bool running2;
 
@@ -43,12 +43,12 @@ namespace Menu
 
                             option2 = Console.ReadLine();
                             
-                            running2 = DoChoosedOption2(option2);
+                            running2 = DoSelectedOption2(option2);
 
                         }while(running2);
                         
-                        FormatedDateAndHour = UM.TakeCurrentDateAndHour();
-                        userAccess.SaveUserLogOutInfo(userAccess, FormatedDateAndHour);
+                        FormattedDateAndHour = UM.TakeCurrentDateAndHour();
+                        userAccess.SaveUserLogOutInfo(userAccess, FormattedDateAndHour);
                         running = !(option2 == "2"); 
 
                     }
@@ -66,10 +66,10 @@ namespace Menu
         }
 
         // Method to take an action given an option in the second menu
-        static bool DoChoosedOption2(string? option){
+        static bool DoSelectedOption2(string? option){
             bool running2 = true;
             if(option == null){
-                Console.WriteLine("Error: Option choosed is null");
+                Console.WriteLine("Error: Option selected is null");
                 return running2;
             }
 
@@ -102,7 +102,7 @@ namespace Menu
 
                 option = Console.ReadLine();
 
-                running = DoChoosedOption(option);
+                running = DoSelectedOption(option);
 
             }while(running);
 

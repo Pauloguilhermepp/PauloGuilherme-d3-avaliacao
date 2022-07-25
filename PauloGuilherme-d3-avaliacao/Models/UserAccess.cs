@@ -36,7 +36,7 @@ namespace Models
 
         // Method to write a message of access
 
-        public void SaveUserAcessInfo(UserAccess userAccess, string[] FormattedDateAndHour)
+        public void SaveUserAccessInfo(UserAccess userAccess, string[] FormattedDateAndHour)
         {
             string[] line = { UserAccessedSystemMessage(userAccess, FormattedDateAndHour) };
             File.AppendAllLines(path, line);

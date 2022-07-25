@@ -28,8 +28,8 @@ namespace Utils
         // Method to take current date and hour
         public static string[] TakeCurrentDateAndHour(){
             string[] DateAndHour = DateTime.UtcNow.ToString().Split(" ");
-            string[] FormatedDateAnHour = {DateAndHour[0], $"{DateAndHour[1]} {DateAndHour[2]}"};
-            return FormatedDateAnHour;
+            string[] FormattedDateAnHour = {DateAndHour[0], $"{DateAndHour[1]} {DateAndHour[2]}"};
+            return FormattedDateAnHour;
         }
 
     }
