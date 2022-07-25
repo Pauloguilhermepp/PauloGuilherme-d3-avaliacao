@@ -6,7 +6,7 @@ namespace Models
 
         private string? Name { get; set; }
 
-        private const string path = "Repositories/UserAccess.csv";
+        private const string path = "UserAccessLogs/UserAccess.csv";
 
         // Class constructor
         public UserAccess(string?[] userAccessInfo)
