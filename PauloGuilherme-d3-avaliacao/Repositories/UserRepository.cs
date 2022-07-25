@@ -1,3 +1,4 @@
+// File with methods to manipulate User database
 using MySql.Data.MySqlClient;
 namespace Repositories
 {

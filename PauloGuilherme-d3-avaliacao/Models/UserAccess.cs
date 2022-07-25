@@ -1,3 +1,4 @@
+// File with basic UserAcess methods
 namespace Models
 {
     internal class UserAccess: BasicFile{
@@ -7,12 +8,15 @@ namespace Models
 
         private const string path = "database/UserAccess.csv";
 
+        // Class constructor
         public UserAccess(string[] userAccessInfo)
         {
             Name = userAccessInfo[0];
             IdUserAccess = userAccessInfo[1];
             CreateFolderAndFile(path);
         }
+
+        // Method to format a message of access
 
         private static string UserAccessedSystemMensage(UserAccess userAccess, string[] FormatedDateAnHour)
         {
@@ -21,6 +25,8 @@ namespace Models
             return line;
         }
 
+        // Method to format a message of log out
+
         private static string UserLogOutSystemMensage(UserAccess userAccess, string[] FormatedDateAnHour)
         {
             string line = $"The user {userAccess.Name} ({userAccess.IdUserAccess})";
@@ -28,11 +34,15 @@ namespace Models
             return line;
         }
 
+        // Method to write a message of access
+
         public void SaveUserAcessInfo(UserAccess userAccess, string[] FormatedDateAnHour)
         {
             string[] line = { UserAccessedSystemMensage(userAccess, FormatedDateAnHour) };
             File.AppendAllLines(path, line);
         }
+
+        // Method to write a message of log out
 
         public void SaveUserLogOutInfo(UserAccess userAccess, string[] FormatedDateAnHour)
         {
