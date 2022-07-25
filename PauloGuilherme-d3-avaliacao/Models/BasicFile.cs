@@ -1,4 +1,4 @@
-namespace read_write_files.Models
+namespace Models
 {
 
     public class BasicFile

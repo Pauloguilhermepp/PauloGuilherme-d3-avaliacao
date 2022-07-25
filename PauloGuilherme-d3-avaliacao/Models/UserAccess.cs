@@ -1,5 +1,5 @@
 
-namespace read_write_files.Models
+namespace Models
 {
     internal class UserAccess: BasicFile{
         private string IdUserAccess { get; set; } = string.Empty;
