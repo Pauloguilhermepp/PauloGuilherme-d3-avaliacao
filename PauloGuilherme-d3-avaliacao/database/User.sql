@@ -9,8 +9,8 @@ USE PauloGuilherme_d3_avalicao;
 -- Create User table
 CREATE TABLE IF NOT EXISTS User(
 	UserId		        VARCHAR(255) NOT NULL UNIQUE,
-	UserName			VARCHAR(255) NOT NULL UNIQUE,
-	UserEmail	        VARCHAR(255) NOT NULL,
+	UserName			VARCHAR(255) NOT NULL,
+	UserEmail	        VARCHAR(255) NOT NULL UNIQUE,
 	UserPassword	    VARCHAR(255) NOT NULL
 );
 
