@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "UUWt6Wx7NZ7gM7avbOJIZ+qSsbalyUGN8xQGmcAG7uWxL/ZtPOgOsCmA69ye6t5Ht0PDwXOgcIy93Opi3ATYog==",
+  "dgSpecHash": "91VEx0GSMTBYcdkuF0pz45b94Ku6U5ycOKABEXYPuqryXHqTeQmNt34sEprWmeR0rY/D67rUopHY4VI6iqwaCw==",
   "success": true,
   "projectFilePath": "/home/paulo/Desktop/PauloGuilherme-d3-avaliacao/PauloGuilherme-d3-avaliacao/PauloGuilherme-d3-avaliacao.csproj",
   "expectedPackageFiles": [
+    "/home/paulo/.nuget/packages/bcrypt.net/0.1.0/bcrypt.net.0.1.0.nupkg.sha512",
     "/home/paulo/.nuget/packages/bouncycastle.netcore/1.8.5/bouncycastle.netcore.1.8.5.nupkg.sha512",
     "/home/paulo/.nuget/packages/google.protobuf/3.19.4/google.protobuf.3.19.4.nupkg.sha512",
     "/home/paulo/.nuget/packages/k4os.compression.lz4/1.2.6/k4os.compression.lz4.1.2.6.nupkg.sha512",
@@ -30,5 +31,16 @@
     "/home/paulo/.nuget/packages/system.text.encoding.codepages/4.4.0/system.text.encoding.codepages.4.4.0.nupkg.sha512",
     "/home/paulo/.nuget/packages/system.windows.extensions/4.7.0/system.windows.extensions.4.7.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'BCrypt.Net 0.1.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "BCrypt.Net",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

@@ -6,7 +6,7 @@ namespace Models
 
         private string Name { get; set; } = string.Empty;
 
-        private const string path = "database/UserAccess.csv";
+        private const string path = "Repositories/UserAccess.csv";
 
         // Class constructor
         public UserAccess(string[] userAccessInfo)
