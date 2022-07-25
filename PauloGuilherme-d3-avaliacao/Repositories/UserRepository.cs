@@ -5,8 +5,12 @@ namespace Repositories
 {
     internal class UserRepository{
         // Method to take user data during login
-        public static string[] CheckUserPassword(string email, string password){
-            string[] NameAndId = {null, null};
+        public static string?[] CheckUserPassword(string? email, string? password){
+            string?[] NameAndId = {null, null};
+            if(email == null || password == null){
+                Console.WriteLine("Error: email or password are null");
+                return NameAndId;
+            }
 
             string connStr = "server=localhost;user=root;database=PauloGuilherme_d3_avalicao;port=3306;password=Aa@299792458";
             

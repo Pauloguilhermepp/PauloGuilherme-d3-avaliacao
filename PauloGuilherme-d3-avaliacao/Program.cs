@@ -21,17 +21,17 @@ namespace InitialMenu
         }
 
         // Method to realize the login process:
-        static string[] LoginProtocol(){
-            string user, password;
-            string[] DateAndHour, LoginInfo = new string[3];
+        static string?[] LoginProtocol(){
+            string? email, password;
+            string?[] DateAndHour, LoginInfo = new string[2];
 
-            Console.Write("Write your username:");
-            user = Console.ReadLine();
+            Console.Write("Write your email:");
+            email = Console.ReadLine();
         
             Console.Write("Write your password:");
             password = Console.ReadLine();
 
-            LoginInfo = UserRepository.CheckUserPassword(user, password);
+            LoginInfo = UserRepository.CheckUserPassword(email, password);
             DateAndHour = TakeCurrentDateAndHour();
 
 
@@ -51,33 +51,48 @@ namespace InitialMenu
         }
 
         // Method to take an action given an option in the second menu
-        static void DoChoosedOption2(string option){
+        static bool DoChoosedOption2(string? option){
+            bool running2 = true;
+            if(option == null){
+                Console.WriteLine("Error: Option choosed is null");
+                return running2;
+            }
+
             switch(option)
             {
                 case "1":
                     Console.WriteLine("Logging out");
+                    running2 = false;
                     break;
                 case "2":
                     Console.WriteLine("Turning off system");
+                    running2 = false;
                     break;
                 default:
                     Console.WriteLine("Please, choose a command from the menu:");
                     break;
             }
+
+            return running2;
         }
 
         // Method to take an action given an option in the main menu
-        static bool DoChoosedOption(string option){
+        static bool DoChoosedOption(string? option){
             bool running = true;
+            if(option == null){
+                Console.WriteLine("Error: Option choosed is null");
+                return running;
+            }
             switch(option)
             {
                 case "1":
-                    string[] LoginInfo = LoginProtocol();
+                    string?[] LoginInfo = LoginProtocol();
                     if(LoginInfo[0] != null && LoginInfo[1] != null){
                         UserAccess userAccess = new(LoginInfo);
                         string[] FormatedDateAndHour = TakeCurrentDateAndHour();
                         userAccess.SaveUserAcessInfo(userAccess, FormatedDateAndHour);
-                        string option2;
+                        string? option2;
+                        bool running2;
 
                         do
                         {
@@ -85,9 +100,9 @@ namespace InitialMenu
 
                             option2 = Console.ReadLine();
                             
-                            DoChoosedOption2(option2);
+                            running2 = DoChoosedOption2(option2);
 
-                        }while(option2 != "1" && option2 != "2");
+                        }while(running2);
                         
                         FormatedDateAndHour = TakeCurrentDateAndHour();
                         userAccess.SaveUserLogOutInfo(userAccess, FormatedDateAndHour);
@@ -111,7 +126,7 @@ namespace InitialMenu
         static void Main(string[] args)
         {
             bool running;
-            string option;
+            string? option;
             do
             {
                 ShowMenu();

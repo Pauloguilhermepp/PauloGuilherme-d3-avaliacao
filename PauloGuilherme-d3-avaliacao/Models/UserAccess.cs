@@ -2,14 +2,14 @@
 namespace Models
 {
     internal class UserAccess: BasicFile{
-        private string IdUserAccess { get; set; } = string.Empty;
+        private string? IdUserAccess { get; set; }
 
-        private string Name { get; set; } = string.Empty;
+        private string? Name { get; set; }
 
         private const string path = "Repositories/UserAccess.csv";
 
         // Class constructor
-        public UserAccess(string[] userAccessInfo)
+        public UserAccess(string?[] userAccessInfo)
         {
             Name = userAccessInfo[0];
             IdUserAccess = userAccessInfo[1];
